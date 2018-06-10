@@ -42,6 +42,10 @@ export class EpcQrDataBuilder {
     }
 
     setTransferAmount(amount: number, currency: EpcQrCurrency): this {
+        if (isNaN(amount)) {
+            throw new Error('The transfer amount must be a number.');
+            
+        }
         if (amount < 0.01) {
             throw new Error('The transfer amount must be larger than 0.01.');
         }
