@@ -1,0 +1,31 @@
+{
+  "name": "epcqr-server",
+  "version": "0.1.0",
+  "description": "A simple Express endpoint that generates EPC QR codes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egonny/epcqr-server.git"
+  },
+  "keywords": [
+    "epc",
+    "qr"
+  ],
+  "author": "Egon Okerman <dev@egon.me> (https://egon.me)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/egonny/epcqr-server/issues"
+  },
+  "homepage": "https://github.com/egonny/epcqr-server#readme",
+  "dependencies": {
+    "qrcode": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.3.2",
+    "@types/qrcode": "^0.8.1",
+    "typescript": "^2.9.1"
+  }
+}
