@@ -30,6 +30,7 @@
     "@types/iban": "0.0.30",
     "@types/node": "^10.3.2",
     "@types/qrcode": "^0.8.1",
+    "ts-node": "^6.1.0",
     "typescript": "^2.9.1"
   }
 }
