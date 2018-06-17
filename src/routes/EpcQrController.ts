@@ -20,7 +20,11 @@ const getEpcQrData = (iban?: string, name?: string, amount?: string, bic?: strin
         .setPurpose(purpose || '')
         .setUnstructuredRemittanceInformation(message || '');
 
-    return builder.buildV2();
+    // Fallback to V2 if we don't get a BIC (however, compatibility with v2 is lower)
+    if (bic) {
+        return builder.buildV2();
+    }
+    return builder.buildV1();
 }
 
 router.get('/qr', (req, res) => {
